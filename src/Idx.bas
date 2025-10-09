@@ -36,11 +36,11 @@ Public Function Index(ByRef x As Variant, _
 		Debug.Print "ERROR: The indices must have one dimension."
 	End If
 	
-	' Short-circuit for no indices...
-	' Dim iLen As Long: iLen = Arr_Length(indices, dimension := 1)
-	' If iLen = 0 Then
-	' 	Debug.Print "ERROR: At least one index is required."
-	' End If
+	' Short-circuit for no indices.
+	Dim iLen As Long: iLen = Arr_Length(indices, dimension := 1)
+	If iLen = 0 Then
+		Debug.Print "ERROR: At least one index is required."
+	End If
 	
 	
 	' ################
@@ -99,14 +99,15 @@ Public Function Arr_Index(ByRef arr As Variant, _
 		Debug.Print "ERROR: The indices must have exactly one dimension."
 	End If
 	
-	' Short-circuit for impossibly many indices...
+	' Short-circuit for no indices...
 	Dim iLen As Long: iLen = Arr_Length(indices, dimension := 1)
-	If iLen > MAX_RANK Then Debug.Print "ERROR: No array may accept more than " & VBA.CStr(MAX_RANK) & " indices for " & VBA.CStr(MAX_RANK) & " dimensions."
-	
-	' ' ...or for none.
-	' If iLen = 0 Then
-	' 	Debug.Print "ERROR: At least one index is required."
-	' End If
+	If iLen = 0 Then
+		Debug.Print "ERROR: At least one index is required."
+		
+	' ...or for impossibly many.
+	ElseIf iLen > MAX_RANK Then
+		Debug.Print "ERROR: No array may accept more than " & VBA.CStr(MAX_RANK) & " indices for " & VBA.CStr(MAX_RANK) & " dimensions."
+	End If
 	
 	' Short-circuit for uninitialized array.
 	Dim aRnk As Long: aRnk = Arr_Rank(arr)
