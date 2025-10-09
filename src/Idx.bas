@@ -148,7 +148,7 @@ Private Sub IndexRaw(ByRef x As Variant, _
 	ByRef i As Variant, _
 	ByVal l As Long, _
 	ByVal u As Long _
-) As Variant
+)
 	' Recursive case: several indices left.
 	If l < u Then
 		' Index into an array on all its dimensions.
