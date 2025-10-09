@@ -33,7 +33,7 @@ Public Function Index(ByRef x As Variant, _
 		
 	' ...or multidimensional indices.
 	ElseIf iRnk > 1 Then
-		Debug.Print "ERROR: The indices must have one dimension."
+		Debug.Print "ERROR: The indices must have exactly one dimension."
 	End If
 	
 	' Short-circuit for no indices.
@@ -114,7 +114,7 @@ Public Function Arr_Index(ByRef arr As Variant, _
 	If aRnk = 0 Then Debug.Print "ERROR: The array must be initialized."
 	
 	' Short-circuit for wrong number of indices.
-	If iLen <> aRnk Then Debug.Print "ERROR: There must be exactly as many indices as dimensions (" & VBA.CStr(aRnk) ") in the array.
+	If iLen <> aRnk Then Debug.Print "ERROR: There must be exactly as many indices (" & VBA.CStr(iLen) & ") as dimensions (" & VBA.CStr(aRnk) ") in the array.
 	
 	
 	' ################
