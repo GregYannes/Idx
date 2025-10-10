@@ -2,6 +2,30 @@ Attribute VB_Name = "Idx"
 
 
 
+' ##############
+' ## Metadata ##
+' ##############
+
+Public Const MOD_NAME As String = "Idx"
+
+' Public Const MOD_VERSION As String = "0.1.0"
+
+Public Const MOD_REPO As String = "https://github.com/GregYannes/Idx"
+
+
+
+' ###############
+' ## Constants ##
+' ###############
+
+' The most dimensions an array may have.  See MS docs: https://learn.microsoft.com/office/vba/language/reference/user-interface-help/too-many-dimensions
+Public Const MAX_ARR_RANK As Long = 60
+
+' ' ...
+' Public Const MAX_ARR_LENGTH As Long = ...
+
+
+
 ' #########
 ' ## API ##
 ' #########
@@ -76,11 +100,6 @@ Public Function Arr_Index(ByRef arr As Variant, _
 ) As Variant
 ' 	Optional ByRef exists As Boolean
 	
-	' See MS docs here for limit of 60: https://learn.microsoft.com/office/vba/language/reference/user-interface-help/too-many-dimensions
-	Const MAX_RANK As Long = 60
-	' Const MAX_LENGTH As Long
-	
-	
 	' ################
 	' ## Validation ##
 	' ################
@@ -105,8 +124,8 @@ Public Function Arr_Index(ByRef arr As Variant, _
 		Debug.Print "ERROR: At least one index is required."
 		
 	' ...or for impossibly many.
-	ElseIf iLen > MAX_RANK Then
-		Debug.Print "ERROR: No array may accept more than " & VBA.CStr(MAX_RANK) & " indices for " & VBA.CStr(MAX_RANK) & " dimensions."
+	ElseIf iLen > MAX_ARR_RANK Then
+		Debug.Print "ERROR: No array may accept more than " & VBA.CStr(MAX_ARR_RANK) & " indices for " & VBA.CStr(MAX_ARR_RANK) & " dimensions."
 	End If
 	
 	' Short-circuit for uninitialized array.
