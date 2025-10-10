@@ -1,2 +1,2 @@
 # Idx
-Index flexibly into arbitrary data structures in VBA.
+Index flexibly into nested data structures in VBA.
