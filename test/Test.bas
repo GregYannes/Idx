@@ -2,6 +2,22 @@ Attribute VB_Name = "Test"
 
 
 
+Public Sub Test()
+	Debug.Print "##############################"
+	Debug.Print "## Arr_Index() for 3D Array ##"
+	Debug.Print "##############################"
+	Test__Arr_Index__3dArray
+	
+	Debug.Print
+	Debug.Print
+	
+	Debug.Print "##############################"
+	Debug.Print "## Index() for Nested Array ##"
+	Debug.Print "##############################"
+	Test__Index__NestedArray
+End Sub
+
+
 Public Sub Test__Arr_Index__3dArray()
 	' Populate 3D array.
 	Dim a(1 To 2, 3 To 4, 5 To 6) As String
