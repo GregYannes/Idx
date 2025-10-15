@@ -25,6 +25,7 @@ Public Sub Test__Arr_Index__3dArray()
 	
 	' Extract data.
 	Debug.Print "a()           = """ & Idx.Arr_Index(a, Array()) & """"
+	Debug.Print "a(1)          = """ & Idx.Arr_Index(a, Array(1)) & """"
 	Debug.Print "a(1, 4)       = """ & Idx.Arr_Index(a, Array(1, 4)) & """"
 	Debug.Print "a(1, 4, 5)    = """ & Idx.Arr_Index(a, Array(1, 4, 5)) & """"
 	Debug.Print "a(1, 4, 5, 7) = """ & Idx.Arr_Index(a, Array(1, 4, 5, 7)) & """"
