@@ -33,5 +33,45 @@ End Sub
 
 
 Public Sub Test__Index__NestedArray()
-	' ...
+	' Nest arrays 3 deep.
+	Dim a As Variant: a = Array( _
+		Array( _
+			Array( _
+				"0.0.0", _
+				"0.0.1" _
+			), _
+			Array( _
+				"0.1.0", _
+				"0.1.1" _
+			) _
+		), _
+		Array( _
+			Array( _
+				"1.0.0", _
+				"1.0.1" _
+			), _
+			Array( _
+				"1.1.0", _
+				"1.1.1" _
+			) _
+		) _
+	)
+	
+	
+	' Display array metadata.
+	Debug.Print "a.Rank       = " & Idx.Arr_Rank(a)
+	Debug.Print "a(0).Rank    = " & Idx.Arr_Rank(a(0))
+	Debug.Print "a(0)(0).Rank = " & Idx.Arr_Rank(a(0)(0))
+	Debug.Print
+	Debug.Print "a.Length       = " & Idx.Arr_Length(a, dimension := 1)
+	Debug.Print "a(0).Length    = " & Idx.Arr_Length(a(0), dimension := 1)
+	Debug.Print "a(0)(0).Length = " & Idx.Arr_Length(a(0)(0), dimension := 1)
+	
+	
+	' Extract data.
+	Debug.Print "a()           = """ & Idx.Index(a, Array()) & """
+	Debug.Print "a(0)          = """ & Idx.Index(a, Array(0)) & """
+	Debug.Print "a(0)(1)       = """ & Idx.Index(a, Array(0, 1)) & """
+	Debug.Print "a(0)(1)(0)    = """ & Idx.Index(a, Array(0, 1, 0)) & """
+	Debug.Print "a(0)(1)(0)(1) = """ & Idx.Index(a, Array(0, 1, 0, 1)) & """
 End Sub
