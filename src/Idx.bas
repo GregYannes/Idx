@@ -82,7 +82,7 @@ End Function
 
 ' ' Manually extract a value (by index) from a multidimensional array.
 ' ' 
-' ' NOTE: This is identical to regular indexing and thus unnecessary:
+' ' NOTE: This is identical to regular indexing and thus superfluous without tracking existence:
 ' ' 	Arr_Index0(arr, 1, 2, 3, ...)
 ' ' 	           arr( 1, 2, 3, ...)
 ' Public Function Arr_Index0(ByRef arr As Variant, _
