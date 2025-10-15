@@ -133,7 +133,7 @@ Public Function Arr_Index(ByRef arr As Variant, _
 	If aRnk = 0 Then Debug.Print "ERROR: The array must be initialized."
 	
 	' Short-circuit for wrong number of indices.
-	If iLen <> aRnk Then Debug.Print "ERROR: There must be exactly as many indices (" & VBA.CStr(iLen) & ") as dimensions (" & VBA.CStr(aRnk) ") in the array.
+	If iLen <> aRnk Then Debug.Print "ERROR: There must be exactly as many indices (" & VBA.CStr(iLen) & ") as dimensions (" & VBA.CStr(aRnk) ") in the array."
 	
 	
 	' ################
