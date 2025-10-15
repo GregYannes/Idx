@@ -2,7 +2,7 @@ Attribute VB_Name = "Test"
 
 
 
-Public Sub Test()
+Public Sub Test__Arr_Index__3dArray()
 	Dim a(1 To 2, 3 To 4, 5 To 6) As String
 	a(1, 3, 5) = "1.3.5"
 	a(1, 3, 6) = "1.3.6"
@@ -20,4 +20,9 @@ Public Sub Test()
 	Debug.Print "a(1, 4) = """ & Idx.Arr_Index(a, Array(1, 4)) & """"
 	Debug.Print "a(1, 4, 5) = """ & Idx.Arr_Index(a, Array(1, 4, 5)) & """"
 	Debug.Print "a(1, 4, 5, 7) = """ & Idx.Arr_Index(a, Array(1, 4, 5, 7)) & """"
+End Sub
+
+
+Public Sub Test__Index__NestedArray()
+	' ...
 End Sub
