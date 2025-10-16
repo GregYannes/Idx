@@ -18,7 +18,7 @@ Public Sub Test()
 End Sub
 
 
-Public Sub Test__Arr_Index__3dArray()
+Public Sub Test__Arr_Index__MultiArray()
 	' Populate 3D array.
 	Dim arr(1 To 2, 3 To 4, 5 To 6) As String
 	arr(1, 3, 5) = "1.3.5"
