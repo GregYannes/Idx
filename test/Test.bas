@@ -4,6 +4,10 @@ Attribute VB_Name = "Test"
 
 ' Run all tests.
 Public Sub Test()
+	' ##########
+	' ## Data ##
+	' ##########
+	
 	' Populate a 3D array.
 	Dim multiArr(1 To 2, 3 To 4, 5 To 6) As String
 	multiArr(1, 3, 5) = "multiArr(1, 3, 5)"
@@ -51,6 +55,11 @@ Public Sub Test()
 	' Assemble complex data even deeper.
 	clx.Add multiArr, key := "key_3"
 	
+	
+	
+	' #############
+	' ## Testing ##
+	' #############
 	
 	Debug.Print "#################"
 	Debug.Print "## Arr_Index() ##"
