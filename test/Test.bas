@@ -4,11 +4,59 @@ Attribute VB_Name = "Test"
 
 ' Run all tests.
 Public Sub Test()
+	' Populate a 3D array.
+	Dim multiArr(1 To 2, 3 To 4, 5 To 6) As String
+	multiArr(1, 3, 5) = "multiArr(1, 3, 5)"
+	multiArr(1, 3, 6) = "multiArr(1, 3, 6)"
+	multiArr(1, 4, 5) = "multiArr(1, 4, 5)"
+	multiArr(1, 4, 6) = "multiArr(1, 4, 6)"
+	multiArr(2, 3, 5) = "multiArr(2, 3, 5)"
+	multiArr(2, 3, 6) = "multiArr(2, 3, 6)"
+	multiArr(2, 4, 5) = "multiArr(2, 4, 5)"
+	multiArr(2, 4, 6) = "multiArr(2, 4, 6)"
+	
+	
+	' Populate a collection.
+	Dim clx As Collection
+	clx.Add "clx(1)"
+	clx.Add "clx!key_2", key := "key_2"
+	
+	
+	' Nest arrays 3 deep...with the collection too.
+	Dim nestArr As Variant: nestArr = Array( _
+		Array( _
+			Array( _
+				"nestArr(0)(0)(0)", _
+				"nestArr(0)(0)(1)" _
+			), _
+			Array( _
+				"nestArr(0)(1)(0)", _
+				"nestArr(0)(1)(1)" _
+			) _
+		), _
+		Array( _
+			Array( _
+				"nestArr(1)(0)(0)", _
+				"nestArr(1)(0)(1)" _
+			), _
+			Array( _
+				"nestArr(1)(1)(0)", _
+				"nestArr(1)(1)(1)", _
+				clx _
+			) _
+		) _
+	)
+	
+	
+	' Assemble complex data even deeper.
+	clx.Add multiArr, key := "key_3"
+	
+	
 	Debug.Print "#################"
 	Debug.Print "## Arr_Index() ##"
 	Debug.Print "#################"
 	Debug.Print
-	Test__Arr_Index
+	Test__Arr_Index multiArr := multiArr
 	
 	Debug.Print
 	Debug.Print
@@ -18,7 +66,7 @@ Public Sub Test()
 	Debug.Print "## Index() ##"
 	Debug.Print "#############"
 	Debug.Print
-	Test__Index
+	Test__Index multiArr := multiArr, nestArr := nestArr, clx := clx, complexData := complexData
 End Sub
 
 
@@ -39,18 +87,6 @@ End Sub
 
 ' Test Arr_Index() on a multidimensional array.
 Public Sub Test__Arr_Index__MultiArray(ByRef arr As Variant)
-	' ' Populate 3D array.
-	' Dim arr(1 To 2, 3 To 4, 5 To 6) As String
-	' arr(1, 3, 5) = "1.3.5"
-	' arr(1, 3, 6) = "1.3.6"
-	' arr(1, 4, 5) = "1.4.5"
-	' arr(1, 4, 6) = "1.4.6"
-	' arr(2, 3, 5) = "2.3.5"
-	' arr(2, 3, 6) = "2.3.6"
-	' arr(2, 4, 5) = "2.4.5"
-	' arr(2, 4, 6) = "2.4.6"
-	
-	
 	' Display array metadata.
 	Debug.Print "arr.Rank = " & Idx.Arr_Rank(arr)
 	Debug.Print
@@ -123,31 +159,6 @@ End Sub
 
 ' Test Index() on a nested array.
 Public Sub Test__Index__NestedArray(ByRef arr As Variant)
-	' ' Nest arrays 3 deep.
-	' Dim arr As Variant: arr = Array( _
-	' 	Array( _
-	' 		Array( _
-	' 			"0.0.0", _
-	' 			"0.0.1" _
-	' 		), _
-	' 		Array( _
-	' 			"0.1.0", _
-	' 			"0.1.1" _
-	' 		) _
-	' 	), _
-	' 	Array( _
-	' 		Array( _
-	' 			"1.0.0", _
-	' 			"1.0.1" _
-	' 		), _
-	' 		Array( _
-	' 			"1.1.0", _
-	' 			"1.1.1" _
-	' 		) _
-	' 	) _
-	' )
-	
-	
 	' Display array metadata.
 	Debug.Print "arr.Rank       = " & Idx.Arr_Rank(a)
 	Debug.Print "arr(0).Rank    = " & Idx.Arr_Rank(a(0))
