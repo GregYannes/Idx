@@ -18,17 +18,17 @@ Public Sub Test()
 End Sub
 
 
-Public Sub Test__Arr_Index__MultiArray()
-	' Populate 3D array.
-	Dim arr(1 To 2, 3 To 4, 5 To 6) As String
-	arr(1, 3, 5) = "1.3.5"
-	arr(1, 3, 6) = "1.3.6"
-	arr(1, 4, 5) = "1.4.5"
-	arr(1, 4, 6) = "1.4.6"
-	arr(2, 3, 5) = "2.3.5"
-	arr(2, 3, 6) = "2.3.6"
-	arr(2, 4, 5) = "2.4.5"
-	arr(2, 4, 6) = "2.4.6"
+Public Sub Test__Arr_Index__MultiArray(ByRef arr As Variant)
+	' ' Populate 3D array.
+	' Dim arr(1 To 2, 3 To 4, 5 To 6) As String
+	' arr(1, 3, 5) = "1.3.5"
+	' arr(1, 3, 6) = "1.3.6"
+	' arr(1, 4, 5) = "1.4.5"
+	' arr(1, 4, 6) = "1.4.6"
+	' arr(2, 3, 5) = "2.3.5"
+	' arr(2, 3, 6) = "2.3.6"
+	' arr(2, 4, 5) = "2.4.5"
+	' arr(2, 4, 6) = "2.4.6"
 	
 	
 	' Display array metadata.
@@ -48,30 +48,30 @@ Public Sub Test__Arr_Index__MultiArray()
 End Sub
 
 
-Public Sub Test__Index__NestedArray()
-	' Nest arrays 3 deep.
-	Dim arr As Variant: arr = Array( _
-		Array( _
-			Array( _
-				"0.0.0", _
-				"0.0.1" _
-			), _
-			Array( _
-				"0.1.0", _
-				"0.1.1" _
-			) _
-		), _
-		Array( _
-			Array( _
-				"1.0.0", _
-				"1.0.1" _
-			), _
-			Array( _
-				"1.1.0", _
-				"1.1.1" _
-			) _
-		) _
-	)
+Public Sub Test__Index__NestedArray(ByRef arr As Variant)
+	' ' Nest arrays 3 deep.
+	' Dim arr As Variant: arr = Array( _
+	' 	Array( _
+	' 		Array( _
+	' 			"0.0.0", _
+	' 			"0.0.1" _
+	' 		), _
+	' 		Array( _
+	' 			"0.1.0", _
+	' 			"0.1.1" _
+	' 		) _
+	' 	), _
+	' 	Array( _
+	' 		Array( _
+	' 			"1.0.0", _
+	' 			"1.0.1" _
+	' 		), _
+	' 		Array( _
+	' 			"1.1.0", _
+	' 			"1.1.1" _
+	' 		) _
+	' 	) _
+	' )
 	
 	
 	' Display array metadata.
