@@ -3,18 +3,31 @@ Attribute VB_Name = "Test"
 
 
 Public Sub Test()
-	Debug.Print "##############################"
-	Debug.Print "## Arr_Index() for 3D Array ##"
-	Debug.Print "##############################"
-	Test__Arr_Index__3dArray
+	Debug.Print "#################"
+	Debug.Print "## Arr_Index() ##"
+	Debug.Print "#################"
+	Test__Arr_Index
 	
 	Debug.Print
 	Debug.Print
 	
-	Debug.Print "##############################"
-	Debug.Print "## Index() for Nested Array ##"
-	Debug.Print "##############################"
-	Test__Index__NestedArray
+	Debug.Print "#############"
+	Debug.Print "## Index() ##"
+	Debug.Print "#############"
+	Test__Index
+End Sub
+
+
+
+' #################
+' ## Arr_Index() ##
+' #################
+
+Public Sub Test__Arr_Index(ByRef multiArr As Variant)
+	Debug.Print "##########################################"
+	Debug.Print "## Arr_Index() | Multidimensional Array ##"
+	Debug.Print "##########################################"
+	Test__Arr_Index__MultiArray arr := multiArr
 End Sub
 
 
@@ -45,6 +58,19 @@ Public Sub Test__Arr_Index__MultiArray(ByRef arr As Variant)
 	Debug.Print "arr(1, 4)       = """ & Idx.Arr_Index(arr, Array(1, 4)) & """"
 	Debug.Print "arr(1, 4, 5)    = """ & Idx.Arr_Index(arr, Array(1, 4, 5)) & """"
 	Debug.Print "arr(1, 4, 5, 7) = """ & Idx.Arr_Index(arr, Array(1, 4, 5, 7)) & """"
+End Sub
+
+
+
+' #############
+' ## Index() ##
+' #############
+
+Public Sub Test__Index(ByRef nestArr As Variant)
+	Debug.Print "############################"
+	Debug.Print "## Index() | Nested Array ##"
+	Debug.Print "############################"
+	Test__Index__NestedArray arr := nestArr
 End Sub
 
 
