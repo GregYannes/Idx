@@ -2,18 +2,22 @@ Attribute VB_Name = "Test"
 
 
 
+' Run all tests.
 Public Sub Test()
 	Debug.Print "#################"
 	Debug.Print "## Arr_Index() ##"
 	Debug.Print "#################"
+	Debug.Print
 	Test__Arr_Index
 	
+	Debug.Print
 	Debug.Print
 	Debug.Print
 	
 	Debug.Print "#############"
 	Debug.Print "## Index() ##"
 	Debug.Print "#############"
+	Debug.Print
 	Test__Index
 End Sub
 
@@ -23,14 +27,17 @@ End Sub
 ' ## Arr_Index() ##
 ' #################
 
+' Run all tests on Arr_Index().
 Public Sub Test__Arr_Index(ByRef multiArr As Variant)
 	Debug.Print "##########################################"
 	Debug.Print "## Arr_Index() | Multidimensional Array ##"
 	Debug.Print "##########################################"
+	Debug.Print
 	Test__Arr_Index__MultiArray arr := multiArr
 End Sub
 
 
+' Test Arr_Index() on a multidimensional array.
 Public Sub Test__Arr_Index__MultiArray(ByRef arr As Variant)
 	' ' Populate 3D array.
 	' Dim arr(1 To 2, 3 To 4, 5 To 6) As String
@@ -66,14 +73,17 @@ End Sub
 ' ## Index() ##
 ' #############
 
+' Run all tests on Index().
 Public Sub Test__Index(ByRef nestArr As Variant)
 	Debug.Print "############################"
 	Debug.Print "## Index() | Nested Array ##"
 	Debug.Print "############################"
+	Debug.Print
 	Test__Index__NestedArray arr := nestArr
 End Sub
 
 
+' Test Index() on a nested array.
 Public Sub Test__Index__NestedArray(ByRef arr As Variant)
 	' ' Nest arrays 3 deep.
 	' Dim arr As Variant: arr = Array( _
