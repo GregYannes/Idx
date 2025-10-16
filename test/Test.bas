@@ -88,6 +88,12 @@ Public Sub Test__Index( _
 End Sub
 
 
+' Test Index() on a multidimensional array.
+Public Sub Test__Index__MultiArray(ByRef arr As Variant)
+	' ...
+End Sub
+
+
 ' Test Index() on a nested array.
 Public Sub Test__Index__NestedArray(ByRef arr As Variant)
 	' ' Nest arrays 3 deep.
@@ -131,4 +137,16 @@ Public Sub Test__Index__NestedArray(ByRef arr As Variant)
 	Debug.Print "arr(0)(1)       = """ & Idx.Index(arr, Array(0, 1)) & """
 	Debug.Print "arr(0)(1)(0)    = """ & Idx.Index(arr, Array(0, 1, 0)) & """
 	Debug.Print "arr(0)(1)(0)(1) = """ & Idx.Index(arr, Array(0, 1, 0, 1)) & """
+End Sub
+
+
+' Test Index() on a Collection.
+Public Sub Test__Index__Collection(ByRef clx As Collection)
+	' ...
+End Sub
+
+
+' Test Index() on arbitrarily complex data.
+Public Sub Test__Index__Complex(ByRef data As Variant)
+	' ...
 End Sub
