@@ -74,7 +74,12 @@ End Sub
 ' #############
 
 ' Run all tests on Index().
-Public Sub Test__Index(ByRef nestArr As Variant)
+Public Sub Test__Index( _
+	ByRef multiArr As Variant, _
+	ByRef nestArr As Variant, _
+	ByRef clx As Collection, _
+	ByRef complexData As Variant _
+)
 	Debug.Print "############################"
 	Debug.Print "## Index() | Nested Array ##"
 	Debug.Print "############################"
