@@ -86,11 +86,41 @@ End Sub
 
 ' Run all tests on Arr_Index().
 Public Sub Test__Arr_Index(ByRef multiArr As Variant)
+	Debug.Print "#######################################"
+	Debug.Print "## Arr_Index() | Uninitialized Array ##"
+	Debug.Print "#######################################"
+	Debug.Print
+	Test__Arr_Index__UninitArray
+	
+	Debug.Print
+	Debug.Print
+	
+	Debug.Print "###############################"
+	Debug.Print "## Arr_Index() | Empty Array ##"
+	Debug.Print "###############################"
+	Debug.Print
+	Test__Arr_Index__EmptyArray
+	
+	Debug.Print
+	Debug.Print
+	
 	Debug.Print "##########################################"
 	Debug.Print "## Arr_Index() | Multidimensional Array ##"
 	Debug.Print "##########################################"
 	Debug.Print
 	Test__Arr_Index__MultiArray arr := multiArr
+End Sub
+
+
+' Test Arr_Index() on an uninitialized array.
+Public Sub Test__Arr_Index__UninitArray()
+	' ...
+End Sub
+
+
+' Test Arr_Index() on an empty array.
+Public Sub Test__Arr_Index__EmptyArray()
+	' ...
 End Sub
 
 
@@ -125,6 +155,24 @@ Public Sub Test__Index( _
 	ByRef clx As Collection, _
 	ByRef complexData As Variant _
 )
+	Debug.Print "###################################"
+	Debug.Print "## Index() | Uninitialized Array ##"
+	Debug.Print "###################################"
+	Debug.Print
+	Test__Index__UninitArray
+	
+	Debug.Print
+	Debug.Print
+	
+	Debug.Print "###########################"
+	Debug.Print "## Index() | Empty Array ##"
+	Debug.Print "###########################"
+	Debug.Print
+	Test__Index__EmptyArray
+	
+	Debug.Print
+	Debug.Print
+	
 	Debug.Print "######################################"
 	Debug.Print "## Index() | Multidimensional Array ##"
 	Debug.Print "######################################"
@@ -157,6 +205,18 @@ Public Sub Test__Index( _
 	Debug.Print "############################"
 	Debug.Print
 	Test__Index__Complex data := complexData
+End Sub
+
+
+' Test Index() on an uninitialized array.
+Public Sub Test__Index__UninitArray()
+	' ...
+End Sub
+
+
+' Test Index() on an empty array.
+Public Sub Test__Index__EmptyArray()
+	' ...
 End Sub
 
 
