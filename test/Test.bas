@@ -80,11 +80,38 @@ Public Sub Test__Index( _
 	ByRef clx As Collection, _
 	ByRef complexData As Variant _
 )
+	Debug.Print "######################################"
+	Debug.Print "## Index() | Multidimensional Array ##"
+	Debug.Print "######################################"
+	Debug.Print
+	Test__Index__MultiArray arr := multiArr
+	
+	Debug.Print
+	Debug.Print
+	
 	Debug.Print "############################"
 	Debug.Print "## Index() | Nested Array ##"
 	Debug.Print "############################"
 	Debug.Print
 	Test__Index__NestedArray arr := nestArr
+	
+	Debug.Print
+	Debug.Print
+	
+	Debug.Print "##########################"
+	Debug.Print "## Index() | Collection ##"
+	Debug.Print "##########################"
+	Debug.Print
+	Test__Index__Collection clx := clx
+	
+	Debug.Print
+	Debug.Print
+	
+	Debug.Print "############################"
+	Debug.Print "## Index() | Complex Data ##"
+	Debug.Print "############################"
+	Debug.Print
+	Test__Index__Complex data := complexData
 End Sub
 
 
