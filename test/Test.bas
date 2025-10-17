@@ -135,7 +135,7 @@ Public Sub Test__Arr_Index__UninitArray(ByRef arr As Variant)
 	
 	' Extract data.
 	Debug.Print "arr()           = " & Idx.Arr_Index(arr, Array())
-	Debug.Print "arr(1)          = " & Idx.Arr_Index(arr, Array(1))
+' #9: 	Debug.Print "arr(1)          = " & Idx.Arr_Index(arr, Array(1))
 End Sub
 
 
@@ -150,8 +150,8 @@ Public Sub Test__Arr_Index__EmptyArray(ByRef arr As Variant)
 	
 	' Extract data.
 	Debug.Print "arr()           = " & Idx.Arr_Index(arr, Array())
-	Debug.Print "arr(1)          = " & Idx.Arr_Index(arr, Array(1))
-	Debug.Print "arr(1, 4)       = " & Idx.Arr_Index(arr, Array(1, 4))
+' #9: 	Debug.Print "arr(1)          = " & Idx.Arr_Index(arr, Array(1))
+' #9: 	Debug.Print "arr(1, 4)       = " & Idx.Arr_Index(arr, Array(1, 4))
 End Sub
 
 
@@ -167,10 +167,10 @@ Public Sub Test__Arr_Index__MultiArray(ByRef arr As Variant)
 	
 	' Extract data.
 	Debug.Print "arr()           = " & Idx.Arr_Index(arr, Array())
-	Debug.Print "arr(1)          = " & Idx.Arr_Index(arr, Array(1))
-	Debug.Print "arr(1, 4)       = " & Idx.Arr_Index(arr, Array(1, 4))
+' #9: 	Debug.Print "arr(1)          = " & Idx.Arr_Index(arr, Array(1))
+' #9: 	Debug.Print "arr(1, 4)       = " & Idx.Arr_Index(arr, Array(1, 4))
 	Debug.Print "arr(1, 4, 5)    = " & Idx.Arr_Index(arr, Array(1, 4, 5))
-	Debug.Print "arr(1, 4, 5, 7) = " & Idx.Arr_Index(arr, Array(1, 4, 5, 7))
+' #9: 	Debug.Print "arr(1, 4, 5, 7) = " & Idx.Arr_Index(arr, Array(1, 4, 5, 7))
 End Sub
 
 
@@ -250,8 +250,8 @@ Public Sub Test__Index__UninitArray(ByRef arr As Variant)
 	
 	
 	' Extract data.
-	Debug.Print "arr()           = " & Idx.Index(arr, Array())
-	Debug.Print "arr(1)          = " & Idx.Index(arr, Array(1))
+' #9: 	Debug.Print "arr()           = " & Idx.Index(arr, Array())
+' #9: 	Debug.Print "arr(1)          = " & Idx.Index(arr, Array(1))
 End Sub
 
 
@@ -265,9 +265,9 @@ Public Sub Test__Index__EmptyArray(ByRef arr As Variant)
 	
 	
 	' Extract data.
-	Debug.Print "arr()           = " & Idx.Index(arr, Array())
-	Debug.Print "arr(1)          = " & Idx.Index(arr, Array(1))
-	Debug.Print "arr(1, 4)       = " & Idx.Index(arr, Array(1, 4))
+' #9: 	Debug.Print "arr()           = " & Idx.Index(arr, Array())
+' #9: 	Debug.Print "arr(1)          = " & Idx.Index(arr, Array(1))
+' #9: 	Debug.Print "arr(1, 4)       = " & Idx.Index(arr, Array(1, 4))
 End Sub
 
 
@@ -282,11 +282,11 @@ Public Sub Test__Index__MultiArray(ByRef arr As Variant)
 	
 	
 	' Extract data.
-	Debug.Print "arr()           = " & Idx.Index(arr, Array())
-	Debug.Print "arr(1)          = " & Idx.Index(arr, Array(1))
-	Debug.Print "arr(1, 4)       = " & Idx.Index(arr, Array(1, 4))
+' #9: 	Debug.Print "arr()           = " & Idx.Index(arr, Array())
+' #9: 	Debug.Print "arr(1)          = " & Idx.Index(arr, Array(1))
+' #9: 	Debug.Print "arr(1, 4)       = " & Idx.Index(arr, Array(1, 4))
 	Debug.Print "arr(1, 4, 5)    = " & Idx.Index(arr, Array(1, 4, 5))
-	Debug.Print "arr(1, 4, 5, 7) = " & Idx.Index(arr, Array(1, 4, 5, 7))
+' #13: 	Debug.Print "arr(1, 4, 5, 7) = " & Idx.Index(arr, Array(1, 4, 5, 7))
 End Sub
 
 
@@ -303,23 +303,23 @@ Public Sub Test__Index__NestedArray(ByRef arr As Variant)
 	
 	
 	' Extract data.
-	Debug.Print "arr()           = " & Idx.Index(arr, Array())
-	Debug.Print "arr(0)          = " & Idx.Index(arr, Array(0))
-	Debug.Print "arr(0)(1)       = " & Idx.Index(arr, Array(0, 1))
+' #9: 	Debug.Print "arr()           = " & Idx.Index(arr, Array())
+' #13: 	Debug.Print "arr(0)          = " & Idx.Index(arr, Array(0))
+' #13: 	Debug.Print "arr(0)(1)       = " & Idx.Index(arr, Array(0, 1))
 	Debug.Print "arr(0)(1)(0)    = " & Idx.Index(arr, Array(0, 1, 0))
-	Debug.Print "arr(0)(1)(0)(1) = " & Idx.Index(arr, Array(0, 1, 0, 1))
+' #13: 	Debug.Print "arr(0)(1)(0)(1) = " & Idx.Index(arr, Array(0, 1, 0, 1))
 End Sub
 
 
 ' Test Index() on a Collection.
 Public Sub Test__Index__Collection(ByRef clx As Collection)
 	' Extract data.
-	Debug.Print "clx()     = " & Idx.Index(clx, Array())
-	Debug.Print "clx(0)    = " & Idx.Index(clx, Array(0))
+' #9: 	Debug.Print "clx()     = " & Idx.Index(clx, Array())
+' #9: 	Debug.Print "clx(0)    = " & Idx.Index(clx, Array(0))
 	Debug.Print "clx(1)    = " & Idx.Index(clx, Array(1))
 	Debug.Print "clx(2)    = " & Idx.Index(clx, Array(2))
 	Debug.Print "clx!key_2 = " & Idx.Index(clx, Array("key_2"))
-	Debug.Print "clx(1, 1) = " & Idx.Index(clx, Array(1, 1))
+' #13: 	Debug.Print "clx(1, 1) = " & Idx.Index(clx, Array(1, 1))
 End Sub
 
 
@@ -327,7 +327,7 @@ End Sub
 Public Sub Test__Index__Complex(ByRef data As Variant)
 	' Extract data.
 	Debug.Print "data.Type                    = " & VBA.TypeName(data)
-	Debug.Print "data()                       = " & Idx.Index(data, Array())
+' #9: 	Debug.Print "data()                       = " & Idx.Index(data, Array())
 	Debug.Print "data(1)(1)(1)                = " & Idx.Index(data, Array(1, 1, 1))
 	Debug.Print "data(1)(1)(2).Type           = " & VBA.TypeName(Idx.Index(data, Array(1, 1, 2)))
 	Debug.Print "data(1)(1)(2)(1)             = " & Idx.Index(data, Array(1, 1, 2, 1))
