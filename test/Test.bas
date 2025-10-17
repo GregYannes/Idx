@@ -29,7 +29,7 @@ Public Sub Test()
 	
 	
 	' Populate a collection.
-	Dim clx As Collection
+	Dim clx As Collection: Set clx = New Collection
 	clx.Add "clx(1)"
 	clx.Add "clx!key_2", key := "key_2"
 	
@@ -61,6 +61,7 @@ Public Sub Test()
 	
 	
 	' Assemble complex data even deeper.
+	Dim complexData As Variant: complexData = nestArr
 	clx.Add multiArr, key := "key_3"
 	
 	
@@ -96,7 +97,7 @@ End Sub
 Public Sub Test__Arr_Index( _
 	ByRef uninitArr As Variant, _
 	ByRef emptyArr As Variant, _
-	ByRef multiArr As Variant, _
+	ByRef multiArr As Variant _
 )
 	Debug.Print "#######################################"
 	Debug.Print "## Arr_Index() | Uninitialized Array ##"
@@ -324,21 +325,21 @@ End Sub
 ' Test Index() on a nested array.
 Public Sub Test__Index__NestedArray(ByRef arr As Variant)
 	' Display array metadata.
-	Debug.Print "arr.Rank       = " & Idx.Arr_Rank(a)
-	Debug.Print "arr(0).Rank    = " & Idx.Arr_Rank(a(0))
-	Debug.Print "arr(0)(0).Rank = " & Idx.Arr_Rank(a(0)(0))
+	Debug.Print "arr.Rank       = " & Idx.Arr_Rank(arr)
+	Debug.Print "arr(0).Rank    = " & Idx.Arr_Rank(arr(0))
+	Debug.Print "arr(0)(0).Rank = " & Idx.Arr_Rank(arr(0)(0))
 	Debug.Print
-	Debug.Print "arr.Length       = " & Idx.Arr_Length(a, dimension := 1)
-	Debug.Print "arr(0).Length    = " & Idx.Arr_Length(a(0), dimension := 1)
-	Debug.Print "arr(0)(0).Length = " & Idx.Arr_Length(a(0)(0), dimension := 1)
+	Debug.Print "arr.Length       = " & Idx.Arr_Length(arr, dimension := 1)
+	Debug.Print "arr(0).Length    = " & Idx.Arr_Length(arr(0), dimension := 1)
+	Debug.Print "arr(0)(0).Length = " & Idx.Arr_Length(arr(0)(0), dimension := 1)
 	
 	
 	' Extract data.
-	Debug.Print "arr()           = """ & Idx.Index(arr, Array()) & """
-	Debug.Print "arr(0)          = """ & Idx.Index(arr, Array(0)) & """
-	Debug.Print "arr(0)(1)       = """ & Idx.Index(arr, Array(0, 1)) & """
-	Debug.Print "arr(0)(1)(0)    = """ & Idx.Index(arr, Array(0, 1, 0)) & """
-	Debug.Print "arr(0)(1)(0)(1) = """ & Idx.Index(arr, Array(0, 1, 0, 1)) & """
+	Debug.Print "arr()           = """ & Idx.Index(arr, Array()) & """"
+	Debug.Print "arr(0)          = """ & Idx.Index(arr, Array(0)) & """"
+	Debug.Print "arr(0)(1)       = """ & Idx.Index(arr, Array(0, 1)) & """"
+	Debug.Print "arr(0)(1)(0)    = """ & Idx.Index(arr, Array(0, 1, 0)) & """"
+	Debug.Print "arr(0)(1)(0)(1) = """ & Idx.Index(arr, Array(0, 1, 0, 1)) & """"
 End Sub
 
 
