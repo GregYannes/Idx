@@ -257,11 +257,11 @@ Public Sub Test__Index__UninitArray()
 	
 	
 	' Extract data.
-	Debug.Print "arr()           = """ & Idx.Arr_Index(arr, Array()) & """"
-	Debug.Print "arr(1)          = """ & Idx.Arr_Index(arr, Array(1)) & """"
-	' Debug.Print "arr(1, 4)       = """ & Idx.Arr_Index(arr, Array(1, 4)) & """"
-	' Debug.Print "arr(1, 4, 5)    = """ & Idx.Arr_Index(arr, Array(1, 4, 5)) & """"
-	' Debug.Print "arr(1, 4, 5, 7) = """ & Idx.Arr_Index(arr, Array(1, 4, 5, 7)) & """"
+	Debug.Print "arr()           = """ & Idx.Index(arr, Array()) & """"
+	Debug.Print "arr(1)          = """ & Idx.Index(arr, Array(1)) & """"
+	' Debug.Print "arr(1, 4)       = """ & Idx.Index(arr, Array(1, 4)) & """"
+	' Debug.Print "arr(1, 4, 5)    = """ & Idx.Index(arr, Array(1, 4, 5)) & """"
+	' Debug.Print "arr(1, 4, 5, 7) = """ & Idx.Index(arr, Array(1, 4, 5, 7)) & """"
 End Sub
 
 
@@ -280,11 +280,11 @@ Public Sub Test__Index__EmptyArray()
 	
 	
 	' Extract data.
-	Debug.Print "arr()           = """ & Idx.Arr_Index(arr, Array()) & """"
-	Debug.Print "arr(1)          = """ & Idx.Arr_Index(arr, Array(1)) & """"
-	Debug.Print "arr(1, 4)       = """ & Idx.Arr_Index(arr, Array(1, 4)) & """"
-	' Debug.Print "arr(1, 4, 5)    = """ & Idx.Arr_Index(arr, Array(1, 4, 5)) & """"
-	' Debug.Print "arr(1, 4, 5, 7) = """ & Idx.Arr_Index(arr, Array(1, 4, 5, 7)) & """"
+	Debug.Print "arr()           = """ & Idx.Index(arr, Array()) & """"
+	Debug.Print "arr(1)          = """ & Idx.Index(arr, Array(1)) & """"
+	Debug.Print "arr(1, 4)       = """ & Idx.Index(arr, Array(1, 4)) & """"
+	' Debug.Print "arr(1, 4, 5)    = """ & Idx.Index(arr, Array(1, 4, 5)) & """"
+	' Debug.Print "arr(1, 4, 5, 7) = """ & Idx.Index(arr, Array(1, 4, 5, 7)) & """"
 End Sub
 
 
@@ -299,11 +299,11 @@ Public Sub Test__Index__MultiArray(ByRef arr As Variant)
 	
 	
 	' Extract data.
-	Debug.Print "arr()           = """ & Idx.Arr_Index(arr, Array()) & """"
-	Debug.Print "arr(1)          = """ & Idx.Arr_Index(arr, Array(1)) & """"
-	Debug.Print "arr(1, 4)       = """ & Idx.Arr_Index(arr, Array(1, 4)) & """"
-	Debug.Print "arr(1, 4, 5)    = """ & Idx.Arr_Index(arr, Array(1, 4, 5)) & """"
-	Debug.Print "arr(1, 4, 5, 7) = """ & Idx.Arr_Index(arr, Array(1, 4, 5, 7)) & """"
+	Debug.Print "arr()           = """ & Idx.Index(arr, Array()) & """"
+	Debug.Print "arr(1)          = """ & Idx.Index(arr, Array(1)) & """"
+	Debug.Print "arr(1, 4)       = """ & Idx.Index(arr, Array(1, 4)) & """"
+	Debug.Print "arr(1, 4, 5)    = """ & Idx.Index(arr, Array(1, 4, 5)) & """"
+	Debug.Print "arr(1, 4, 5, 7) = """ & Idx.Index(arr, Array(1, 4, 5, 7)) & """"
 End Sub
 
 
