@@ -345,11 +345,26 @@ End Sub
 
 ' Test Index() on a Collection.
 Public Sub Test__Index__Collection(ByRef clx As Collection)
-	' ...
+	' Extract data.
+	Debug.Print "clx()     = """ & Idx.Index(clx, Array()) & """"
+	Debug.Print "clx(0)    = """ & Idx.Index(clx, Array(0)) & """"
+	Debug.Print "clx(1)    = """ & Idx.Index(clx, Array(1)) & """"
+	Debug.Print "clx(2)    = """ & Idx.Index(clx, Array(2)) & """"
+	Debug.Print "clx!key_2 = """ & Idx.Index(clx, Array("key_2")) & """"
+	Debug.Print "clx(1, 1) = """ & Idx.Index(clx, Array(1, 1)) & """"
 End Sub
 
 
 ' Test Index() on arbitrarily complex data.
 Public Sub Test__Index__Complex(ByRef data As Variant)
-	' ...
+	' Extract data.
+	Debug.Print "data.Type                    = " & VBA.TypeName(data)
+	Debug.Print "data()                       = """ & Idx.Index(data, Array()) & """"
+	Debug.Print "data(1)(1)(1)                = """ & Idx.Index(data, Array(1, 1, 1)) & """"
+	Debug.Print "data(1)(1)(2).Type           = " & VBA.TypeName(Idx.Index(data, Array(1, 1, 2)))
+	Debug.Print "data(1)(1)(2)(1)             = """ & Idx.Index(data, Array(1, 1, 2, 1)) & """"
+	Debug.Print "data(1)(1)(2)(2)             = """ & Idx.Index(data, Array(1, 1, 2, 2)) & """"
+	Debug.Print "data(1)(1)(2)!key_2          = """ & Idx.Index(data, Array(1, 1, 2, "key_2")) & """"
+	Debug.Print "data(1)(1)(2)!key_3.Type     = " & VBA.TypeName(Idx.Index(data, Array(1, 1, 2, "key_3"))
+	Debug.Print "data(1)(1)(2)!key_3(1, 4, 5) = """ & Idx.Index(data, Array(1, 1, 2, "key_3", 1, 4, 5)) & """"
 End Sub
