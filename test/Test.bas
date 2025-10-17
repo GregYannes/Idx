@@ -127,10 +127,6 @@ End Sub
 
 ' Test Arr_Index() on an uninitialized array.
 Public Sub Test__Arr_Index__UninitArray(ByRef arr As Variant)
-	' ' Declare uninitialized array.
-	' Dim arr() As String
-	
-	
 	' Display array metadata.
 	Debug.Print "arr.Rank = " & Idx.Arr_Rank(arr)
 	Debug.Print
@@ -150,10 +146,6 @@ End Sub
 
 ' Test Arr_Index() on an empty array.
 Public Sub Test__Arr_Index__EmptyArray(ByRef arr As Variant)
-	' ' Create empty array.
-	' Dim arr As Variant: arr = Array()
-	
-	
 	' Display array metadata.
 	Debug.Print "arr.Rank = " & Idx.Arr_Rank(arr)
 	Debug.Print
@@ -259,10 +251,6 @@ End Sub
 
 ' Test Index() on an uninitialized array.
 Public Sub Test__Index__UninitArray(ByRef arr As Variant)
-	' ' Declare uninitialized array.
-	' Dim arr() As String
-	
-	
 	' Display array metadata.
 	Debug.Print "arr.Rank = " & Idx.Arr_Rank(arr)
 	Debug.Print
@@ -282,10 +270,6 @@ End Sub
 
 ' Test Index() on an empty array.
 Public Sub Test__Index__EmptyArray(ByRef arr As Variant)
-	' ' Create empty array.
-	' Dim arr As Variant: arr = Array()
-	
-	
 	' Display array metadata.
 	Debug.Print "arr.Rank = " & Idx.Arr_Rank(arr)
 	Debug.Print
