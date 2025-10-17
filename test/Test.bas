@@ -134,7 +134,7 @@ Public Sub Test__Arr_Index__UninitArray(ByRef arr As Variant)
 	
 	
 	' Extract data.
-	Debug.Print "arr()           = " & Idx.Arr_Index(arr, Array())			' NOTE: Should this throw a custom error (#9)?
+'  #9: 	Debug.Print "arr()           = " & Idx.Arr_Index(arr, Array())
 '  #9: 	Debug.Print "arr(1)          = " & Idx.Arr_Index(arr, Array(1))
 End Sub
 
@@ -149,7 +149,7 @@ Public Sub Test__Arr_Index__EmptyArray(ByRef arr As Variant)
 	
 	
 	' Extract data.
-	Debug.Print "arr()           = " & Idx.Arr_Index(arr, Array())			' NOTE: Should this throw a custom error (#9)?
+'  #9: 	Debug.Print "arr()           = " & Idx.Arr_Index(arr, Array())
 '  #9: 	Debug.Print "arr(1)          = " & Idx.Arr_Index(arr, Array(1))
 '  #9: 	Debug.Print "arr(1, 4)       = " & Idx.Arr_Index(arr, Array(1, 4))
 End Sub
@@ -166,7 +166,7 @@ Public Sub Test__Arr_Index__MultiArray(ByRef arr As Variant)
 	
 	
 	' Extract data.
-	Debug.Print "arr()           = " & Idx.Arr_Index(arr, Array())			' NOTE: Should this throw a custom error (#9)?
+'  #9: 	Debug.Print "arr()           = " & Idx.Arr_Index(arr, Array())
 '  #9: 	Debug.Print "arr(1)          = " & Idx.Arr_Index(arr, Array(1))
 '  #9: 	Debug.Print "arr(1, 4)       = " & Idx.Arr_Index(arr, Array(1, 4))
 	Debug.Print "arr(1, 4, 5)    = " & Idx.Arr_Index(arr, Array(1, 4, 5))
