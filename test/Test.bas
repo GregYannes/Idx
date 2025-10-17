@@ -8,6 +8,14 @@ Public Sub Test()
 	' ## Data ##
 	' ##########
 	
+	' Declare an uninitialized array.
+	Dim uninitArr() As String
+	
+	
+	' Initialize an empty array.
+	Dim emptyArr As Variant: emptyArr = Array()
+	
+	
 	' Populate a 3D array.
 	Dim multiArr(1 To 2, 3 To 4, 5 To 6) As String
 	multiArr(1, 3, 5) = "multiArr(1, 3, 5)"
@@ -65,7 +73,7 @@ Public Sub Test()
 	Debug.Print "## Arr_Index() ##"
 	Debug.Print "#################"
 	Debug.Print
-	Test__Arr_Index multiArr := multiArr
+	Test__Arr_Index uninitArr := uninitArr, emptyArr := emptyArr, multiArr := multiArr
 	
 	Debug.Print
 	Debug.Print
@@ -75,7 +83,7 @@ Public Sub Test()
 	Debug.Print "## Index() ##"
 	Debug.Print "#############"
 	Debug.Print
-	Test__Index multiArr := multiArr, nestArr := nestArr, clx := clx, complexData := complexData
+	Test__Index uninitArr := uninitArr, emptyArr := emptyArr, multiArr := multiArr, nestArr := nestArr, clx := clx, complexData := complexData
 End Sub
 
 
@@ -85,12 +93,16 @@ End Sub
 ' #################
 
 ' Run all tests on Arr_Index().
-Public Sub Test__Arr_Index(ByRef multiArr As Variant)
+Public Sub Test__Arr_Index( _
+	ByRef uninitArr As Variant, _
+	ByRef emptyArr As Variant, _
+	ByRef multiArr As Variant, _
+)
 	Debug.Print "#######################################"
 	Debug.Print "## Arr_Index() | Uninitialized Array ##"
 	Debug.Print "#######################################"
 	Debug.Print
-	Test__Arr_Index__UninitArray
+	Test__Arr_Index__UninitArray arr := uninitArr
 	
 	Debug.Print
 	Debug.Print
@@ -99,7 +111,7 @@ Public Sub Test__Arr_Index(ByRef multiArr As Variant)
 	Debug.Print "## Arr_Index() | Empty Array ##"
 	Debug.Print "###############################"
 	Debug.Print
-	Test__Arr_Index__EmptyArray
+	Test__Arr_Index__EmptyArray arr := emptyArr
 	
 	Debug.Print
 	Debug.Print
@@ -113,9 +125,9 @@ End Sub
 
 
 ' Test Arr_Index() on an uninitialized array.
-Public Sub Test__Arr_Index__UninitArray()
-	' Declare uninitialized array.
-	Dim arr() As String
+Public Sub Test__Arr_Index__UninitArray(ByRef arr As Variant)
+	' ' Declare uninitialized array.
+	' Dim arr() As String
 	
 	
 	' Display array metadata.
@@ -136,9 +148,9 @@ End Sub
 
 
 ' Test Arr_Index() on an empty array.
-Public Sub Test__Arr_Index__EmptyArray()
-	' Create empty array.
-	Dim arr As Variant: arr = Array()
+Public Sub Test__Arr_Index__EmptyArray(ByRef arr As Variant)
+	' ' Create empty array.
+	' Dim arr As Variant: arr = Array()
 	
 	
 	' Display array metadata.
@@ -184,6 +196,8 @@ End Sub
 
 ' Run all tests on Index().
 Public Sub Test__Index( _
+	ByRef uninitArr As Variant, _
+	ByRef emptyArr As Variant, _
 	ByRef multiArr As Variant, _
 	ByRef nestArr As Variant, _
 	ByRef clx As Collection, _
@@ -193,7 +207,7 @@ Public Sub Test__Index( _
 	Debug.Print "## Index() | Uninitialized Array ##"
 	Debug.Print "###################################"
 	Debug.Print
-	Test__Index__UninitArray
+	Test__Index__UninitArray arr := uninitArr
 	
 	Debug.Print
 	Debug.Print
@@ -202,7 +216,7 @@ Public Sub Test__Index( _
 	Debug.Print "## Index() | Empty Array ##"
 	Debug.Print "###########################"
 	Debug.Print
-	Test__Index__EmptyArray
+	Test__Index__EmptyArray arr := emptyArr
 	
 	Debug.Print
 	Debug.Print
@@ -243,9 +257,9 @@ End Sub
 
 
 ' Test Index() on an uninitialized array.
-Public Sub Test__Index__UninitArray()
-	' Declare uninitialized array.
-	Dim arr() As String
+Public Sub Test__Index__UninitArray(ByRef arr As Variant)
+	' ' Declare uninitialized array.
+	' Dim arr() As String
 	
 	
 	' Display array metadata.
@@ -266,9 +280,9 @@ End Sub
 
 
 ' Test Index() on an empty array.
-Public Sub Test__Index__EmptyArray()
-	' Create empty array.
-	Dim arr As Variant: arr = Array()
+Public Sub Test__Index__EmptyArray(ByRef arr As Variant)
+	' ' Create empty array.
+	' Dim arr As Variant: arr = Array()
 	
 	
 	' Display array metadata.
