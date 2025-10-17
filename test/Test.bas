@@ -365,6 +365,6 @@ Public Sub Test__Index__Complex(ByRef data As Variant)
 	Debug.Print "data(1)(1)(2)(1)             = " & Idx.Index(data, Array(1, 1, 2, 1))
 	Debug.Print "data(1)(1)(2)(2)             = " & Idx.Index(data, Array(1, 1, 2, 2))
 	Debug.Print "data(1)(1)(2)!key_2          = " & Idx.Index(data, Array(1, 1, 2, "key_2"))
-	Debug.Print "data(1)(1)(2)!key_3.Type     = " & VBA.TypeName(Idx.Index(data, Array(1, 1, 2, "key_3"))
+	Debug.Print "data(1)(1)(2)!key_3.Type     = " & VBA.TypeName(Idx.Index(data, Array(1, 1, 2, "key_3")))
 	Debug.Print "data(1)(1)(2)!key_3(1, 4, 5) = " & Idx.Index(data, Array(1, 1, 2, "key_3", 1, 4, 5))
 End Sub
