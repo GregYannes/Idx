@@ -131,16 +131,11 @@ Public Sub Test__Arr_Index__UninitArray(ByRef arr As Variant)
 	Debug.Print "arr.Rank = " & Idx.Arr_Rank(arr)
 	Debug.Print
 	Debug.Print "arr.Length(1) = " & Idx.Arr_Length(arr, dimension := 1)
-	' Debug.Print "arr.Length(2) = " & Idx.Arr_Length(arr, dimension := 2)
-	' Debug.Print "arr.Length(3) = " & Idx.Arr_Length(arr, dimension := 3)
 	
 	
 	' Extract data.
 	Debug.Print "arr()           = " & Idx.Arr_Index(arr, Array())
 	Debug.Print "arr(1)          = " & Idx.Arr_Index(arr, Array(1))
-	' Debug.Print "arr(1, 4)       = " & Idx.Arr_Index(arr, Array(1, 4))
-	' Debug.Print "arr(1, 4, 5)    = " & Idx.Arr_Index(arr, Array(1, 4, 5))
-	' Debug.Print "arr(1, 4, 5, 7) = " & Idx.Arr_Index(arr, Array(1, 4, 5, 7))
 End Sub
 
 
@@ -151,15 +146,12 @@ Public Sub Test__Arr_Index__EmptyArray(ByRef arr As Variant)
 	Debug.Print
 	Debug.Print "arr.Length(1) = " & Idx.Arr_Length(arr, dimension := 1)
 	Debug.Print "arr.Length(2) = " & Idx.Arr_Length(arr, dimension := 2)
-	' Debug.Print "arr.Length(3) = " & Idx.Arr_Length(arr, dimension := 3)
 	
 	
 	' Extract data.
 	Debug.Print "arr()           = " & Idx.Arr_Index(arr, Array())
 	Debug.Print "arr(1)          = " & Idx.Arr_Index(arr, Array(1))
 	Debug.Print "arr(1, 4)       = " & Idx.Arr_Index(arr, Array(1, 4))
-	' Debug.Print "arr(1, 4, 5)    = " & Idx.Arr_Index(arr, Array(1, 4, 5))
-	' Debug.Print "arr(1, 4, 5, 7) = " & Idx.Arr_Index(arr, Array(1, 4, 5, 7))
 End Sub
 
 
@@ -255,16 +247,11 @@ Public Sub Test__Index__UninitArray(ByRef arr As Variant)
 	Debug.Print "arr.Rank = " & Idx.Arr_Rank(arr)
 	Debug.Print
 	Debug.Print "arr.Length(1) = " & Idx.Arr_Length(arr, dimension := 1)
-	' Debug.Print "arr.Length(2) = " & Idx.Arr_Length(arr, dimension := 2)
-	' Debug.Print "arr.Length(3) = " & Idx.Arr_Length(arr, dimension := 3)
 	
 	
 	' Extract data.
 	Debug.Print "arr()           = " & Idx.Index(arr, Array())
 	Debug.Print "arr(1)          = " & Idx.Index(arr, Array(1))
-	' Debug.Print "arr(1, 4)       = " & Idx.Index(arr, Array(1, 4))
-	' Debug.Print "arr(1, 4, 5)    = " & Idx.Index(arr, Array(1, 4, 5))
-	' Debug.Print "arr(1, 4, 5, 7) = " & Idx.Index(arr, Array(1, 4, 5, 7))
 End Sub
 
 
@@ -275,15 +262,12 @@ Public Sub Test__Index__EmptyArray(ByRef arr As Variant)
 	Debug.Print
 	Debug.Print "arr.Length(1) = " & Idx.Arr_Length(arr, dimension := 1)
 	Debug.Print "arr.Length(2) = " & Idx.Arr_Length(arr, dimension := 2)
-	' Debug.Print "arr.Length(3) = " & Idx.Arr_Length(arr, dimension := 3)
 	
 	
 	' Extract data.
 	Debug.Print "arr()           = " & Idx.Index(arr, Array())
 	Debug.Print "arr(1)          = " & Idx.Index(arr, Array(1))
 	Debug.Print "arr(1, 4)       = " & Idx.Index(arr, Array(1, 4))
-	' Debug.Print "arr(1, 4, 5)    = " & Idx.Index(arr, Array(1, 4, 5))
-	' Debug.Print "arr(1, 4, 5, 7) = " & Idx.Index(arr, Array(1, 4, 5, 7))
 End Sub
 
 
