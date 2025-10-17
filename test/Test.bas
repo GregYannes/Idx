@@ -244,19 +244,66 @@ End Sub
 
 ' Test Index() on an uninitialized array.
 Public Sub Test__Index__UninitArray()
-	' ...
+	' Declare uninitialized array.
+	Dim arr() As String
+	
+	
+	' Display array metadata.
+	Debug.Print "arr.Rank = " & Idx.Arr_Rank(arr)
+	Debug.Print
+	Debug.Print "arr.Length(1) = " & Idx.Arr_Length(arr, dimension := 1)
+	' Debug.Print "arr.Length(2) = " & Idx.Arr_Length(arr, dimension := 2)
+	' Debug.Print "arr.Length(3) = " & Idx.Arr_Length(arr, dimension := 3)
+	
+	
+	' Extract data.
+	Debug.Print "arr()           = """ & Idx.Arr_Index(arr, Array()) & """"
+	Debug.Print "arr(1)          = """ & Idx.Arr_Index(arr, Array(1)) & """"
+	' Debug.Print "arr(1, 4)       = """ & Idx.Arr_Index(arr, Array(1, 4)) & """"
+	' Debug.Print "arr(1, 4, 5)    = """ & Idx.Arr_Index(arr, Array(1, 4, 5)) & """"
+	' Debug.Print "arr(1, 4, 5, 7) = """ & Idx.Arr_Index(arr, Array(1, 4, 5, 7)) & """"
 End Sub
 
 
 ' Test Index() on an empty array.
 Public Sub Test__Index__EmptyArray()
-	' ...
+	' Create empty array.
+	Dim arr As Variant: arr = Array()
+	
+	
+	' Display array metadata.
+	Debug.Print "arr.Rank = " & Idx.Arr_Rank(arr)
+	Debug.Print
+	Debug.Print "arr.Length(1) = " & Idx.Arr_Length(arr, dimension := 1)
+	Debug.Print "arr.Length(2) = " & Idx.Arr_Length(arr, dimension := 2)
+	' Debug.Print "arr.Length(3) = " & Idx.Arr_Length(arr, dimension := 3)
+	
+	
+	' Extract data.
+	Debug.Print "arr()           = """ & Idx.Arr_Index(arr, Array()) & """"
+	Debug.Print "arr(1)          = """ & Idx.Arr_Index(arr, Array(1)) & """"
+	Debug.Print "arr(1, 4)       = """ & Idx.Arr_Index(arr, Array(1, 4)) & """"
+	' Debug.Print "arr(1, 4, 5)    = """ & Idx.Arr_Index(arr, Array(1, 4, 5)) & """"
+	' Debug.Print "arr(1, 4, 5, 7) = """ & Idx.Arr_Index(arr, Array(1, 4, 5, 7)) & """"
 End Sub
 
 
 ' Test Index() on a multidimensional array.
 Public Sub Test__Index__MultiArray(ByRef arr As Variant)
-	' ...
+	' Display array metadata.
+	Debug.Print "arr.Rank = " & Idx.Arr_Rank(arr)
+	Debug.Print
+	Debug.Print "arr.Length(1) = " & Idx.Arr_Length(arr, dimension := 1)
+	Debug.Print "arr.Length(2) = " & Idx.Arr_Length(arr, dimension := 2)
+	Debug.Print "arr.Length(3) = " & Idx.Arr_Length(arr, dimension := 3)
+	
+	
+	' Extract data.
+	Debug.Print "arr()           = """ & Idx.Arr_Index(arr, Array()) & """"
+	Debug.Print "arr(1)          = """ & Idx.Arr_Index(arr, Array(1)) & """"
+	Debug.Print "arr(1, 4)       = """ & Idx.Arr_Index(arr, Array(1, 4)) & """"
+	Debug.Print "arr(1, 4, 5)    = """ & Idx.Arr_Index(arr, Array(1, 4, 5)) & """"
+	Debug.Print "arr(1, 4, 5, 7) = """ & Idx.Arr_Index(arr, Array(1, 4, 5, 7)) & """"
 End Sub
 
 
