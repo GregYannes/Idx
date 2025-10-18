@@ -1,6 +1,6 @@
 # Idx #
 
-The [**`Idx`**][idx_mod] module lets easily extract data from nested data structures in VBA.  It is inspired by the [`pluck()`][r_pluck] family in [R][r_lang].
+The [**`Idx`**][idx_mod] module lets you easily extract data from nested data structures in VBA.  It is inspired by the [`pluck()`][r_pluck] family in [R][r_lang].
 
 
 # Usage #
@@ -28,7 +28,6 @@ Debug.Print Arr_Index(multi, ind)
 ```
 
 > ```
-> multi(1, 4, 5)
 > multi(1, 4, 5)
 > ```
 
@@ -117,17 +116,17 @@ nested = Array( _
 	Array( _
 		Array("nested(1)(0)(0)", "nested(1)(0)(1)"), _
 		Array("nested(1)(1)(0)", "nested(1)(1)(1)"), _
-		clx
+		clx _
 	) _
 )
 
 
 ' Index manually...
-Debug.Print Index0(nested, 1, 1, 2, "key_3", 2, 3, 6)
+Debug.Print Index0(nested, 1, 2, "key_3", 2, 3, 6)
 
 ' ...or programmatically.
-ind = Array(1, 1, 2, "key_3", 2, 3, 6)
-Debug.Print Index0(nested, ind)
+ind = Array(1, 2, "key_3", 2, 3, 6)
+Debug.Print Index(nested, ind)
 ```
 
 > ```

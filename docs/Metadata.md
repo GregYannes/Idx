@@ -1,3 +1,3 @@
 # Metadata #
 
-![][med/coming_soon.png]
+![](../med/coming_soon.png)
