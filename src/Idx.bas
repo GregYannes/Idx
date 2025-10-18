@@ -2,6 +2,18 @@ Attribute VB_Name = "Idx"
 
 
 
+' #############
+' ## Options ##
+' #############
+
+' Explicitly declare all variables.
+Option Explicit
+
+' ' Hide these developer functions from end users in Excel.
+' Option Private Module
+
+
+
 ' ##############
 ' ## Metadata ##
 ' ##############
