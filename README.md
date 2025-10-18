@@ -3,6 +3,11 @@
 The [**`Idx`**][idx_mod] module lets you easily extract data from nested data structures in VBA.  It is inspired by the [`pluck()`][r_pluck] family in [R][r_lang].
 
 
+> [!TIP]
+> 
+> See [here][idx_rls] for the latest (pre)release.
+
+
 # Usage #
 
 Supply an array of `indices` to [`Arr_Index()`][arr_idx], and it will index into (say) a multidimensional [array][vba_arr].
@@ -183,6 +188,7 @@ Perform broadly useful tasks.
   [idx_mod]: src/Idx.bas
   [r_pluck]: https://purrr.tidyverse.org/reference/pluck
   [r_lang]:  https://www.r-project.org/about.html
+  [idx_rls]: ../../releases/tag/latest
   [arr_idx]: docs/Arr_Index.md
   [vba_arr]: https://learn.microsoft.com/office/vba/language/concepts/getting-started/using-arrays
   [idx_fun]: docs/Index.md
