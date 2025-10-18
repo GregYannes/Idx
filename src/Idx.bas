@@ -33,9 +33,6 @@ Public Const MOD_REPO As String = "https://github.com/GregYannes/Idx"
 ' The most dimensions an array may have.  See MS docs: https://learn.microsoft.com/office/vba/language/reference/user-interface-help/too-many-dimensions
 Public Const MAX_ARR_RANK As Long = 60
 
-' ' ...
-' Public Const MAX_ARR_LENGTH As Long = ...
-
 
 
 ' #########
@@ -92,26 +89,10 @@ Public Function Index(ByRef x As Variant, _
 End Function
 
 
-' ' Manually extract a value (by index) from a multidimensional array.
-' ' 
-' ' NOTE: This is identical to regular indexing and thus superfluous without tracking existence:
-' ' 	Arr_Index0(arr, 1, 2, 3, ...)
-' ' 	           arr( 1, 2, 3, ...)
-' Public Function Arr_Index0(ByRef arr As Variant, _
-' 	ParamArray indices() As Variant _
-) As Variant
-' 	' Dim exists As Boolean
-' 	Dim i As Variant: i = indices
-' 	Assign Arr_Index0, Arr_Index(arr, indices := i)  ' exists := exists
-' End Function
-
-
 ' Programmatically extract a value (by index) from a multidimensional array.
 Public Function Arr_Index(ByRef arr As Variant, _
 	ByRef indices As Variant _
 ) As Variant
-' 	Optional ByRef exists As Boolean
-	
 	' ################
 	' ## Validation ##
 	' ################
@@ -156,16 +137,8 @@ Public Function Arr_Index(ByRef arr As Variant, _
 	Dim low As Long: low = LBound(indices, 1)
 	Dim up As Long: up = UBound(indices, 1)
 	
-' 	On Error GoTo INDEX_ERROR
 	' Index dynamically into the array and extract the value there.
 	Arr_IndexRaw arr, v := Arr_Index, i := indices, l := low, u := up
-	
-' 	exists = True
-' 	Exit Function
-' 	
-' INDEX_ERROR:
-' 	exists = False
-' 	Arr_Index = Empty  ' VBA.CVErr(VBA.Err.Number)
 End Function
 
 
