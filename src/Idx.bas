@@ -20,7 +20,7 @@ Option Explicit
 
 Public Const MOD_NAME As String = "Idx"
 
-' Public Const MOD_VERSION As String = "0.1.0"
+Public Const MOD_VERSION As String = ""
 
 Public Const MOD_REPO As String = "https://github.com/GregYannes/Idx"
 

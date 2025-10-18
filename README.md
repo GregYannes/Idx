@@ -146,6 +146,7 @@ Here are all the features provided by **`Idx`**, which are useful in both VBA an
 Describe the module _itself_.
 
   - [`MOD_NAME`][idx_met]: The name (`String`) of the module.
+  - [`MOD_VERSION`][idx_met]: Its current [version][sem_ver] (`String`).
   - [`MOD_REPO`][idx_met]: The URL (`String`) to its repository.
 
 
@@ -189,6 +190,7 @@ Perform broadly useful tasks.
   [idx_prv]: src/Idx.bas#L12-L13
   [vba_prv]: https://learn.microsoft.com/office/vba/language/reference/user-interface-help/option-private-statement
   [idx_met]: docs/Metadata.md
+  [sem_ver]: https://semver.org
   [vba_dfl]: http://www.cpearson.com/excel/DefaultMember.aspx
   [vba_dix]: https://learn.microsoft.com/office/vba/language/reference/user-interface-help/dictionary-object
   [idx_utl]: docs/Utilities.md
