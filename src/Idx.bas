@@ -30,7 +30,7 @@ Public Const MOD_REPO As String = "https://github.com/GregYannes/Idx"
 ' ## Constants ##
 ' ###############
 
-' The most dimensions an array may have.  See MS docs: https://learn.microsoft.com/office/vba/language/reference/user-interface-help/too-many-dimensions
+' The most dimensions an array may have.
 Public Const MAX_ARR_RANK As Long = 60
 
 
