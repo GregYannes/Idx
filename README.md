@@ -151,23 +151,31 @@ Describe the module _itself_.
 
 ## Array Extraction ##
 
-Programmatic extraction from 
+Index into [arrays][vba_arr], especially multidimensional arrays.
 
-…
+  - [`Arr_Index()`][arr_idx]: Extract an element programmatically with an array of `indices`.
 
 
 ## Arbitrary Extraction ##
 
-…
+Index into arbitrary data.  This may be either an [array][vba_arr] or an object with a [default member][vba_dfl], like a [`Collection`][vba_clx] or [`Dictionary`][vba_dix].  Or it may be some arbitrary nesting of such data structures.
+
+  - [`Index()`][idx_fun]: Extract an element programmatically with an array of `indices`…
+  - [`Index0()`][idx_fun]: …and manually with literal indices.
 
 
 ## Utilities ##
 
-…
+Perform broadly useful tasks.
+
+  - [`Assign()`][idx_utl]: Assign any value (scalar or objective) to a variable (by [reference][vba_byr]).
+  - [`Arr_Rank()`][idx_utl]: Get the ["rank"][net_rnk] (`Long`) of an [array][vba_arr], which is the count of its [dimensions][net_dim][^2].
+  - [`Arr_Length()`][idx_utl]: Get the length (`Long`) of an array.
 
 
 
   [^1]: You may qualify [`Idx.Index()`][idx_fun] to avoid clashes with the [`INDEX()`][xl_idx] function native to Excel.
+  [^2]: In VBA an [array][vba_arr] may have at most [60 dimensions][vba_dim].
 
 
 
@@ -181,4 +189,11 @@ Programmatic extraction from
   [idx_prv]: src/Idx.bas#L12-L13
   [vba_prv]: https://learn.microsoft.com/office/vba/language/reference/user-interface-help/option-private-statement
   [idx_met]: docs/Metadata.md
+  [vba_dfl]: http://www.cpearson.com/excel/DefaultMember.aspx
+  [vba_dix]: https://learn.microsoft.com/office/vba/language/reference/user-interface-help/dictionary-object
+  [idx_utl]: docs/Utilities.md
+  [vba_byr]: https://learn.microsoft.com/dotnet/visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference
+  [net_rnk]: https://learn.microsoft.com/dotnet/api/system.array.rank
+  [net_dim]: https://learn.microsoft.com/dotnet/visual-basic/programming-guide/language-features/arrays/array-dimensions
   [xl_idx]:  https://support.microsoft.com/office/index-function-a5dcf0dd-996d-40a4-a822-b56b061328bd
+  [vba_dim]: https://learn.microsoft.com/office/vba/language/reference/user-interface-help/too-many-dimensions
