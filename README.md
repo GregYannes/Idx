@@ -115,17 +115,18 @@ nested = Array( _
 	), _
 	Array( _
 		Array("nested(1)(0)(0)", "nested(1)(0)(1)"), _
-		Array("nested(1)(1)(0)", "nested(1)(1)(1)"), _
-		clx _
+		Array("nested(1)(1)(0)", "nested(1)(1)(1)", clx) _
 	) _
 )
+'		                                            ^^^
+'		                                         Insertion
 
 
 ' Index manually...
-Debug.Print Index0(nested, 1, 2, "key_3", 2, 3, 6)
+Debug.Print Index0(nested, 1, 1, 2, "key_3", 2, 3, 6)
 
 ' ...or programmatically.
-ind = Array(1, 2, "key_3", 2, 3, 6)
+ind = Array(1, 1, 2, "key_3", 2, 3, 6)
 Debug.Print Index(nested, ind)
 ```
 
