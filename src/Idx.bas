@@ -31,7 +31,7 @@ Public Const MOD_REPO As String = "https://github.com/GregYannes/Idx"
 ' ###############
 
 ' The most dimensions an array may have.
-Public Const MAX_ARR_RANK As Long = 60
+Private Const MAX_ARR_RANK As Long = 60
 
 
 

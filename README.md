@@ -149,13 +149,6 @@ Describe the module _itself_.
   - [`MOD_REPO`][idx_met]: The URL (`String`) to its repository.
 
 
-## Constants ##
-
-Parameters and structural limits in VBA.
-
-  - [`MAX_ARR_RANK`][idx_con]: The [most dimensions][vba_dim] (`Long`) an [array][vba_arr] may have.
-
-
 ## Array Extraction ##
 
 Index into [arrays][vba_arr], especially multidimensional arrays.
@@ -196,8 +189,6 @@ Perform broadly useful tasks.
   [idx_prv]: src/Idx.bas#L12-L13
   [vba_prv]: https://learn.microsoft.com/office/vba/language/reference/user-interface-help/option-private-statement
   [idx_met]: docs/Metadata.md
-  [idx_con]: docs/Constants.md
-  [vba_dim]: https://learn.microsoft.com/office/vba/language/reference/user-interface-help/too-many-dimensions
   [vba_dfl]: http://www.cpearson.com/excel/DefaultMember.aspx
   [vba_dix]: https://learn.microsoft.com/office/vba/language/reference/user-interface-help/dictionary-object
   [idx_utl]: docs/Utilities.md
@@ -205,3 +196,4 @@ Perform broadly useful tasks.
   [net_rnk]: https://learn.microsoft.com/dotnet/api/system.array.rank
   [net_dim]: https://learn.microsoft.com/dotnet/visual-basic/programming-guide/language-features/arrays/array-dimensions
   [xl_idx]:  https://support.microsoft.com/office/index-function-a5dcf0dd-996d-40a4-a822-b56b061328bd
+  [vba_dim]: https://learn.microsoft.com/office/vba/language/reference/user-interface-help/too-many-dimensions
